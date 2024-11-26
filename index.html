@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Calendar Application</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="container">
+        <h1>Calendar Application</h1>
+        
+        <div class="menu">
+            <button onclick="showSection('dayFinder')">Find Out the Day</button>
+            <button onclick="showSection('monthView')">Print Days of the Month</button>
+            <button onclick="showSection('addNote')">Add Note</button>
+            <button onclick="showSection('viewNotes')">Show Notes</button>
+        </div>
+
+        <div id="dayFinder" class="section">
+            <h2>Find Out the Day</h2>
+            <input type="date" id="dateInput">
+            <button onclick="findDay()">Find Day</button>
+            <p id="dayResult"></p>
+        </div>
+
+        <div id="monthView" class="section">
+            <h2>Month View</h2>
+            <input type="month" id="monthInput">
+            <button onclick="showMonthDays()">Show Days</button>
+            <div id="monthDays"></div>
+        </div>
+
+        <div id="addNote" class="section">
+            <h2>Add Note</h2>
+            <input type="date" id="noteDate">
+            <textarea id="noteText" maxlength="50" placeholder="Enter note (max 50 characters)"></textarea>
+            <button onclick="saveNote()">Save Note</button>
+        </div>
+
+        <div id="viewNotes" class="section">
+            <h2>View Notes</h2>
+            <input type="month" id="viewMonth">
+            <button onclick="showNotes()">Show Notes</button>
+            <div id="notesList"></div>
+        </div>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>
